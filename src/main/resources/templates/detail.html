@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
@@ -30,6 +31,13 @@
     <div class="mapa">
         <iframe style="border:none" th:src="@{https://frame.mapy.cz/(q=${vizitka.celaAdresa})}" width="100%" height="100%" frameborder="0"></iframe>
     </div>
+
+    <form class="row g-3" th:action="@{/}" method="post">
+        <input name="id" type="hidden" th:value="${idVizitky}">
+        <div class="col-md-1 align-self-end">
+            <button type="submit" class="btn btn-primary">Delete</button>
+        </div>
+    </form>
 
     <nav>
         <a href="/">◂ zpět na seznam</a>

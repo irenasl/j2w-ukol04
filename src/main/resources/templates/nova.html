@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vizitkovník</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<div class="vizitka--nova">
+
+        <h2 class="mt-5 mb-3">Zadejte novou osobu do vizitkovníku</h2>
+        <form class="row g-3" th:action="@{/nova}" method="post">
+            <div class="col-md-4">
+                <label for="name" class="form-label">Jméno:</label>
+                <input id="name" name="jmeno" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-5">
+                <label for="company" class="form-label">Firma:</label>
+                <input id="company" name="firma" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-2">
+                <label for="street" class="form-label">Ulice a číslo:</label>
+                <input id="street" name="ulice" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-2">
+                <label for="city" class="form-label">PSČ a obec:</label>
+                <input id="city" name="obecPsc" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-5">
+                <label for="email" class="form-label">Email:</label>
+                <input id="email" name="email" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-2">
+                <label for="phone" class="form-label">Telefon:</label>
+                <input id="phone" name="telefon" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-2">
+                <label for="website" class="form-label">Web:</label>
+                <input id="website" name="web" class="form-control" type="text"/>
+            </div>
+            <div class="col-md-1 align-self-end">
+                <button type="submit" class="btn btn-primary"><i class="bi-person-plus-fill" role="img" aria-label="Append"></i></button>
+            </div>
+        </form>
+
+
+    <nav>
+        <a href="/">◂ zpět na seznam</a>
+    </nav>
+</div>
+</body>
+</html>
